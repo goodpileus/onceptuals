@@ -3,7 +3,7 @@
 }
 
 :root {
-  --bg: #F1F0EF;
+  --bg: #f3f0ec;
   --color: #89510d;
 
   --border: #ff5a28;
@@ -73,6 +73,7 @@ img {
 
 .grid.active {
   mix-blend-mode: plus-lighter;
+  mix-blend-mode: screen;
   opacity:1;
 }
 
@@ -137,7 +138,7 @@ img {
 }
 
 nav {
-  position: sticky;
+  /* position: sticky; */
   /* position: relative; */
   /* left:calc(25% + 5px); */
   /* top:10px; */
