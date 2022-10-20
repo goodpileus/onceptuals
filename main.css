@@ -97,6 +97,8 @@ section {
   flex-wrap: wrap;
   /* gap:15px; */
   justify-content: space-between;
+  padding-top:calc(33.33333vh - 91px);
+  padding-bottom:50px;
 }
 
 section p,
@@ -171,25 +173,96 @@ nav div {
   padding:0 calc(25% + 2.5px);
 }
 
+.float {
+  position:fixed;
+  top:10px;
+  left:calc(75% + 2.5px);
+}
+
 button {
   border:0;
   background:transparent;
   font-family: inherit;
   font-size: inherit;
-  padding:0;
+  padding:0 auto;
+  width:20px;
   color:inherit;
   cursor:pointer;
   /* display: block; */
-  /* position:fixed; */
-  /* top:10px; */
-  /* left:calc(75% + 5px); */
-  /* text-transform: uppercase; */
-  bottom:0;
-  right:0;
+  text-transform: uppercase;
+  top:0;
+  right:15px;
   position:absolute;
 }
 
 button:hover {
   color:var(--bg);
   background:var(--color);
+}
+
+.grid-btn::after {
+  content:'-';
+}
+
+
+.grid-btn.active::after {
+  content:'+';
+}
+
+.ls {
+  width:10%;
+  display:none;
+}
+
+a {
+  color:var(--text);
+}
+
+a:hover {
+  background:var(--color);
+  color:var(--bg);
+}
+
+summary {
+  cursor: pointer;
+  display: inline;
+}
+
+summary::selection {
+  background: transparent;
+  color: var(--color);
+}
+
+summary::before {
+  content:'▸ ';
+}
+
+details[open] summary::before {
+  content:'▾ ';
+}
+
+details ul {
+  padding:0 15px;
+  list-style: none;
+  margin-top:46px;
+}
+
+
+@media screen and (min-width:1650px) {
+  section {
+    padding: 10px 210px;
+    padding-top:calc(33.33333vh - 91px);
+  }
+  nav {
+    padding: 10px 210px;
+  }
+  .float {
+    left:calc(75% - 97px);
+    width:calc(25% - 97px);
+  }
+
+  .ls {
+  width:200px;
+  display:table-cell;
+  }
 }
