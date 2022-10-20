@@ -29,9 +29,15 @@
 html {
   /* font-family: 'fira mono', serif; */
   /* font-family: monospace; */
-  font-family: helvetica, sans-serif;
+  /* font-family: 'cmu serif', serif; */
+  font-family: 'inter', serif;
+  /* font-family: 'dejavu sans', cursive; */
+  /* font-family: 'crimson pro', serif; */
+  /* font-family: 'cmu sans serif', serif; */
+  /* font-family: 'cmu typewriter text', monospace; */
+  font-weight:lighter;
   letter-spacing: .5px;
-  font-size: .9rem;
+  font-size: .85rem;
   line-height: 1.2rem;
   color: var(--color);
   background: var(--bg);
@@ -139,16 +145,24 @@ nav {
   padding:10px;
   /* min-height:25vh; */
   width:100%;
-  height:50px;
+  height:60px;
   display: flex;
   /* background:var(--bg); */
   /* z-index: -1; */
+  gap:10px;
+}
+
+nav.bottom {
+  position: fixed;
+  bottom:0;
+  top:auto;
 }
 
 nav div {
   width:25%;
-  margin-right:5px;
+  /* margin-right:5px; */
   /* background: var(--bg); */
+  position: relative;
 }
 
 .full {
@@ -164,11 +178,14 @@ button {
   padding:0;
   color:inherit;
   cursor:pointer;
-
-  position:fixed;
-  top:10px;
-  left:calc(75% + 5px);
+  /* display: block; */
+  /* position:fixed; */
+  /* top:10px; */
+  /* left:calc(75% + 5px); */
   /* text-transform: uppercase; */
+  bottom:0;
+  right:0;
+  position:absolute;
 }
 
 button:hover {
