@@ -50,6 +50,21 @@ body {
 
 img {
   max-width: 100%;
+  position: relative;
+  z-index: 999;
+}
+
+h1, h2 {
+  padding-left:calc(50% + 5px);
+  /* margin-top:0; */
+  margin:0;
+  font-weight: normal;
+  display: block;
+  line-height: 1.8rem;
+}
+
+h2 {
+  font-size: 1.2rem;
 }
 
 
@@ -99,36 +114,58 @@ section {
   justify-content: space-between;
   padding-top:calc(33.33333vh - 91px);
   padding-bottom:50px;
+  /* background:pink; */
 }
 
-section p,
-section div {
+section.text p,
+section.text div {
   width:calc(50% - 5px);
 }
 
-section p:nth-child(even) {
-  /* padding-left:5px; */
+section.text p.full,
+section.text div.full {
+  width:100%;
+  padding:0 calc(25% + 2.5px);
 }
 
-h1, h2 {
-  padding-left:calc(50% + 5px);
-  /* margin-top:0; */
-  margin:0;
-  font-weight: normal;
-  display: block;
-  line-height: 1.8rem;
+section.gallery {
+  /* padding-top:calc(33.33333vh - 37px); */
+  padding-top:0;
+  gap:10px;
+  margin-bottom:10px;
+  padding-right:calc(25% + 7px);
 }
 
-h2 {
-  font-size: 1.2rem;
+section.gallery div {
+  width: calc(33.3333333% - 7px);
+  /* padding:10px; */
+  display: flex;
+  height:calc(33.3333vh - 47px);
+  justify-content:center;
+  align-items:center;
+  /* border:1px solid; */
+  /* margin-bottom:10px; */
 }
 
-img {
-  position: relative;
-  z-index: 999;
-  /* padding-left:1px; */
-  /* width:calc(50% - 5px); */
+section.gallery div img {
+  max-height:90%;
+  max-width:90%;
+  cursor:zoom-in;
 }
+
+section.gallery div.active {
+  width:100%;
+  height:calc(100vh - 120px);
+  justify-content:center;
+  align-items:center;
+}
+
+section.gallery div.active img {
+  cursor:zoom-out;
+  max-height:100%;
+  max-width:100%;
+}
+
 
 .caption {
   align-self: flex-end;
@@ -168,10 +205,6 @@ nav div {
   position: relative;
 }
 
-.full {
-  width:100%;
-  padding:0 calc(25% + 2.5px);
-}
 
 .float {
   position:fixed;
@@ -233,18 +266,23 @@ summary::selection {
   color: var(--color);
 }
 
-summary::before {
-  content:'▸ ';
+summary::after {
+  content:' ▸';
 }
 
-details[open] summary::before {
-  content:'▾ ';
+details[open] summary::after {
+  content:' ▾';
 }
 
 details ul {
-  padding:0 15px;
+  padding:0;
   list-style: none;
-  margin-top:46px;
+  margin-top:34px;
+  padding-right:15px;
+}
+
+details ul li {
+  margin-bottom:.3rem;
 }
 
 
@@ -252,17 +290,20 @@ details ul {
   section {
     padding: 10px 210px;
     padding-top:calc(33.33333vh - 91px);
+    padding-bottom:50px;
   }
+
   nav {
     padding: 10px 210px;
   }
+
   .float {
     left:calc(75% - 97px);
     width:calc(25% - 97px);
   }
 
   .ls {
-  width:200px;
-  display:table-cell;
+    width:200px;
+    display:table-cell;
   }
 }
