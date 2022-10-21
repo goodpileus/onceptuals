@@ -293,6 +293,10 @@ details ul li {
     padding-bottom:50px;
   }
 
+  section.gallery {
+    padding-right: calc(25% + 107px);
+  }
+  
   nav {
     padding: 10px 210px;
   }
