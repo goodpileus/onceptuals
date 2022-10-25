@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Onceptuals</title>
+    <title>Onceptuales</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
 
@@ -58,44 +58,31 @@
 
   <main>
     <nav>
-      <div style="text-align:right;">Onceptuals</div>
+      <div class="title">Onceptuales</div>
       <div></div>
-      <div>Anderson Gallery</div>
+      <div class="gal">Eugenio Espinoza</div>
       <div>
         <div class="float">
-          <button class="grid-btn"></button>
+          <button class="grid-btn" onclick="grid()"></button>
           <details open>
             <summary>pages</summary>
             <ul>
-              <li><a href="#">essay</a></li>
+              <li><a href="index.html" class="active">essay</a></li>
               <li><a href="gallery.html">gallery images</a></li>
-              <li><a href="#">conversation with Eugenio Espinoza</a></li>
+              <li><a href="transcript.html">conversation with Eugenio Espinoza</a></li>
               <li><a href="#">conversation with Mariana Parisca</a></li>
-              <li><a href="#">links</a></li>
+              <li><a href="links.html">links</a></li>
             </ul>
           </details>
         </div>
       </div>
-
-    </nav>
-
-    
-    <nav class="bottom">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div>
-      </div>
-
     </nav>
 
 
     <section class="text">
-      <div>
+      <div class="header">
         <h1>Essay Title</h1>
         <h2>Author</h2>
-        <br>
-        <br>
       </div>
       <div></div>
 
@@ -258,10 +245,21 @@
       <p></p>
     
     </section>
+
+    
+
+    
+    <!-- <footer>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>Anderson Gallery</div>
+    </footer> -->
   </main>
 
     
   <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/js.cookie.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

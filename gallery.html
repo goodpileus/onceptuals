@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Onceptuals</title>
+    <title>Onceptuales</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
 
@@ -58,33 +58,23 @@
 
   <main>
     <nav>
-      <div style="text-align:right;">Onceptuals</div>
+      <div class="title">Onceptuales</div>
       <div></div>
-      <div>Anderson Gallery</div>
+      <div class="gal">Eugenio Espinoza</div>
       <div>
         <div class="float">
-          <button class="grid-btn"></button>
+          <button class="grid-btn" onclick="grid()"></button>
           <details open>
             <summary>pages</summary>
             <ul>
               <li><a href="index.html">essay</a></li>
-              <li><a href="gallery.html">gallery images</a></li>
-              <li><a href="#">conversation with Eugenio Espinoza</a></li>
+              <li><a href="gallery.html" class="active">gallery images</a></li>
+              <li><a href="transcript.html">conversation with Eugenio Espinoza</a></li>
               <li><a href="#">conversation with Mariana Parisca</a></li>
-              <li><a href="#">links</a></li>
+              <li><a href="links.html">links</a></li>
             </ul>
           </details>
         </div>
-      </div>
-
-    </nav>
-
-    
-    <nav class="bottom">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div>
       </div>
 
     </nav>
@@ -142,12 +132,13 @@
       <div>
         <img src="https://images.squarespace-cdn.com/content/v1/568d7e1469492e07cc4315f7/1654546027263-MLIK4AOJPV8YV3MYOQV1/image-asset.jpeg?format=1000w">
       </div>
-    
+      <span class="lightbox-bg"></span>
     </section>
   </main>
 
     
   <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/js.cookie.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
