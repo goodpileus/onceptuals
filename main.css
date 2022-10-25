@@ -59,21 +59,13 @@
   font-style: italic;
 }
 
-/* LUXI MONO */
+/* LIBERTINUS MONO */
 @font-face {
-  font-family: 'luxi';
-  src: url('fonts/luximr.woff2') format('woff2'),
-       url('fonts/luximr.woff') format('woff');
+  font-family: 'libertinus';
+  src: url('fonts/libertinusmono.woff2') format('woff2'),
+       url('fonts/libertinusmono.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'luxi';
-  src: url('fonts/luximri.woff2') format('woff2'),
-       url('fonts/luximri.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
 }
 
 html {
@@ -104,20 +96,24 @@ img {
   z-index: 999;
 }
 
+p {
+  margin: 10px 0;
+}
+
 h1, h2 {
   padding-left:calc(50% + 5px);
   /* margin-top:0; */
   margin:0;
   font-weight: normal;
   display: block;
-  line-height: 1.8rem;
+  font-size: 1.2rem;
+  /* line-height: 1.8rem; */
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1rem;
 }
-
 
 
 .grid {
@@ -132,9 +128,10 @@ h2 {
   mix-blend-mode: screen;
   /* mix-blend-mode: lighten; */
   /* mix-blend-mode: plus-lighter; */
-  opacity:.35;
+  opacity:.4;
   pointer-events: none;
   /* z-index: 9; */
+  transition:opacity .2s;
 }
 
 .grid.active {
@@ -185,7 +182,7 @@ section.text .header {
 }
 
 section.text .header h2 {
-  margin-top:.5rem;
+  margin-top:.3rem;
 }
 
 section.text p,
@@ -203,14 +200,14 @@ section.text p:first-of-type {
   margin-top:0;
 }
 
-section.text .t-s {
+.t-s {
   display: block;
   /* font-weight: bolder; */
   
-  font-family:'luxi', 'inter';
-  /* font-family:'libertinus mono'; */
   /* letter-spacing: 1px; */
   margin-bottom:.3rem;
+  /* font-size: 1.1rem; */
+  /* font-weight: bolder; */
 }
 
 section.text .links {
@@ -336,12 +333,23 @@ nav div {
   /* line-height: 1rem; */
 }
 
+nav div.title,
+nav div.name,
+.t-s,
+h2 {
+  font-family:'libertinus', 'inter';
+  /* font-family:'libertinus mono'; */
+  /* font-family:'crimson pro'; */
+  /* font-family:'schola'; */
+}
+
 nav div.title {
   justify-content: flex-end;
   /* font-family:'luxi mono'; */
   /* font-family:'libertinus mono'; */
+  /* font-weight:bolder; */
   
-  font-family:'luxi', 'inter';
+  /* font-family:'luxi', 'inter'; */
   letter-spacing: 1px;
   /* font-style: italic; */
   /* font-size: 1.4rem; */
@@ -349,14 +357,14 @@ nav div.title {
   /* font-weight: bolder; */
 }
 
-nav div.gal {
+nav div.name {
   justify-content: flex-start;
 }
 
 
 .float {
   position:fixed;
-  top:31px;
+  top:35px;
   /* left:calc(75% + 2.5px); */
   right:0;
   width:25%;
@@ -459,7 +467,7 @@ details[open] summary::after {
 details ul {
   padding:0;
   list-style: none;
-  margin-top:15px;
+  margin-top:10px;
   padding-right:15px;
 }
 
