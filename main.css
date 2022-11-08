@@ -79,8 +79,8 @@ html {
   /* font-family: 'cmu typewriter text', monospace; */
   /* font-weight:lighter; */
   letter-spacing: .5px;
-  font-size: .85rem;
-  line-height: 1.2rem;
+  font-size: .9rem;
+  line-height: 1.25rem;
   color: var(--color);
   background: var(--bg);
   overflow-x: hidden;
@@ -98,6 +98,7 @@ img {
 
 p {
   margin: 10px 0;
+  hyphens: auto;
 }
 
 h1, h2 {
@@ -106,13 +107,26 @@ h1, h2 {
   margin:0;
   font-weight: normal;
   display: block;
-  font-size: 1.2rem;
-  /* line-height: 1.8rem; */
+  font-size: 1.3rem;
+  line-height: 1.3em;
 }
 
 h2 {
   font-size: 1rem;
   line-height: 1rem;
+}
+
+h2,
+nav div.title,
+nav div.name,
+.t-s,
+.caption,
+.fn,
+.fig {
+  font-family:'libertinus', 'inter', sans-serif;
+  /* font-family:'libertinus mono'; */
+  /* font-family:'crimson pro'; */
+  /* font-family:'schola'; */
 }
 
 
@@ -194,6 +208,11 @@ section.text p.full,
 section.text div.full {
   width:100%;
   padding:0 calc(25% + 2.5px);
+}
+
+section.text div.full.image {
+  position: relative;
+  margin:10px 0;
 }
 
 section.text p:first-of-type {
@@ -299,11 +318,27 @@ section.gallery div.active img {
 
 .caption {
   align-self: flex-end;
+  font-size:.9rem;
+  opacity:.7;
+  font-size: 80%;
+  line-height: 135%;
+  /* padding-bottom:30px; */
 }
 
 .caption.left {
-  text-align: right;
+  /* text-align: right; */
   padding-left:25%;
+}
+
+.caption.full-c {
+  /* position:absolute; */
+  /* bottom:-40px; */
+  /* right:25%; */
+  /* width:25%; */
+  width:100%;
+  padding-right:2px;
+  /* background-color: lightblue; */
+  /* text-align: right; */
 }
 
 nav {
@@ -333,15 +368,6 @@ nav div {
   /* line-height: 1rem; */
 }
 
-nav div.title,
-nav div.name,
-.t-s,
-h2 {
-  font-family:'libertinus', 'inter';
-  /* font-family:'libertinus mono'; */
-  /* font-family:'crimson pro'; */
-  /* font-family:'schola'; */
-}
 
 nav div.title {
   justify-content: flex-end;
@@ -364,7 +390,7 @@ nav div.name {
 
 .float {
   position:fixed;
-  top:35px;
+  top:32px;
   /* left:calc(75% + 2.5px); */
   right:0;
   width:25%;
@@ -382,16 +408,19 @@ button {
   color:inherit;
   cursor:pointer;
   /* display: block; */
-  text-transform: uppercase;
-  top:0;
-  right:10px;
-  position:absolute;
-  font-weight:bolder;
 }
 
 button:hover {
   color:var(--bg);
   background:var(--color);
+}
+
+.grid-btn {
+  text-transform: uppercase;
+  top:-2px;
+  right:10px;
+  position:absolute;
+  font-weight:bolder;
 }
 
 .grid-btn::after {
@@ -475,6 +504,59 @@ details ul li {
   margin-bottom:.3rem;
 }
 
+.fn {
+  font-size: 75%;
+  /* background:lightblue; */
+  display: inline-block;
+  position:relative;
+  bottom:3px;
+  left:-3px;
+  top: auto;
+  right: auto;
+  font-weight: normal;
+  width:auto;
+}
+
+/* .fn.active {
+  background: var(--color);
+  color: var(--bg);
+} */
+
+.fnc {
+  width:100%;
+  /* background:lightblue; */
+  border-top:1px solid;
+  border-bottom:1px solid;
+  padding:1rem 2rem;
+  font-size: 90%;
+  margin:.5rem 0;
+  display:none;
+  /* position: relative; */
+  /* z-index: -1; */
+  text-indent: -4px;
+}
+
+.fnc span {
+  /* background:lightblue; */
+  display: inline-block;
+  position: relative;
+  /* font-family: 'libertinus', 'inter', sans-serif; */
+  /* padding: 0 5px; */
+  top: 2px;
+  /* font-size: 80%; */
+  left:-10px;
+  width:0;
+}
+
+.fnc.active {
+  display:inline-block;
+}
+
+.fig {
+  font-size: 80%;
+  display:inline-block;
+}
+
 
 @media screen and (min-width:1650px) {
   section {
@@ -504,5 +586,68 @@ details ul li {
   .ls {
     width:200px;
     display:table-cell;
+  }
+}
+
+@media screen and (max-width:900px) {
+
+  .ms {
+    /* display:none; */
+    width:10%;
+  }
+
+  section.text p, section.text div {
+    width: 100%;
+    padding: 0 10%;
+  }
+
+  section.text p.full, section.text div.full {
+    width: 100%;
+    padding: 0 10%;
+  }
+
+  section.gallery div {
+    width: calc(50% - 5px);
+  }
+
+  section.gallery {
+    padding: 0 calc(10% + 8px);
+    padding-bottom: 50px;
+  }
+
+  section.gallery div.active {
+    padding: 0 calc(10% + 8px);
+  }
+}
+
+@media screen and (max-width:600px) {
+  body {
+    /* background:red; */
+  }
+
+  .ms {
+    display:none;
+    width:10%;
+  }
+
+  section.text p, section.text div {
+    padding: 0 0;
+  }
+
+  section.text p.full, section.text div.full {
+    padding: 0 0;
+  }
+
+  section.gallery div {
+    width: calc(50% - 5px);
+  }
+
+  section.gallery {
+    padding: 0 10px 50px 10px;
+    /* padding-right:10px; */
+  }
+
+  section.gallery div.active {
+    padding: 0 10px;
   }
 }

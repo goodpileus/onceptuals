@@ -48,3 +48,10 @@ function grid() {
     console.log('grid on');
   }
 };
+
+
+
+$(".fn").click(function() {
+  $( this ).next( '.fnc').toggleClass( 'active');
+  $( this ).toggleClass( 'active');
+});
