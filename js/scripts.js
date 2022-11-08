@@ -49,9 +49,16 @@ function grid() {
   }
 };
 
-
-
+// footnote toggle
 $(".fn").click(function() {
   $( this ).next( '.fnc').toggleClass( 'active');
   $( this ).toggleClass( 'active');
+});
+
+
+
+$(".mobile-btn").click(function() {
+  $('.mobile-overlay').toggleClass( 'active');
+  $('.mobile-btn').toggleClass( 'active');
+  $('section').toggleClass( 'hide');
 });

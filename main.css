@@ -383,6 +383,10 @@ nav div.title {
   /* font-weight: bolder; */
 }
 
+nav div.title span {
+  display: none;
+}
+
 nav div.name {
   justify-content: flex-start;
 }
@@ -404,7 +408,6 @@ button {
   font-family: inherit;
   font-size: inherit;
   padding:0 auto;
-  width:20px;
   color:inherit;
   cursor:pointer;
   /* display: block; */
@@ -420,6 +423,7 @@ button:hover {
   top:-2px;
   right:10px;
   position:absolute;
+  width:20px;
   font-weight:bolder;
 }
 
@@ -557,6 +561,10 @@ details ul li {
   display:inline-block;
 }
 
+.mobile-nav {
+  display:none;
+}
+
 
 @media screen and (min-width:1650px) {
   section {
@@ -590,6 +598,102 @@ details ul li {
 }
 
 @media screen and (max-width:900px) {
+  .spacer {
+    display: none;
+  }
+
+  nav div {
+    width:50%;
+  }
+  
+  nav div.title {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left:10.1%;
+  }
+  
+
+  nav div.mobile-nav {
+    display: block;
+    position: absolute;
+  }
+
+  .mobile-btn {
+    top:9px;
+    right:10px;
+    position: fixed;
+    background:var(--bg);
+    padding:5px 10px;
+    font-size: 1.5rem;
+    height:41px;
+    width:40px;
+    z-index: 9999;
+  }
+
+  .mobile-btn.active span {
+    transform:rotate(45deg);
+    display: inline-block;
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    /* width:calc(50% - 15px); */
+    display: none;
+    z-index: 999;
+    /* background:rgba(255, 0, 0, 0.465); */
+    height:100vh;
+    width:100vw;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .mobile-overlay.active {
+    display:block;
+  }
+
+  .mobile-overlay ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 60px;
+    padding-right: 90px;
+    padding-left: 90px;
+    /* background: white; */
+    /* width:calc(50% - 5px); */
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .mobile-overlay ul li {
+    /* margin-bottom: .5rem; */
+    width:calc(50% - 5px);
+    /* background:rgba(144, 238, 144, 0.404); */
+    
+    height:calc(33.3333vh - 47px);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    padding:10px;
+  }
+
+  .grid-btn {
+    position: static;
+    font-size: 110%;
+  }
+
+  .float {
+    width:calc(50% - 15px);
+    right:10px;
+    padding:0;
+    background:var(--bg);  
+    top: 10px;
+    height: 40px;
+
+    display:none;
+  }
 
   .ms {
     /* display:none; */
@@ -618,11 +722,41 @@ details ul li {
   section.gallery div.active {
     padding: 0 calc(10% + 8px);
   }
+
+  section.hide {
+    opacity:0;
+  }
+
 }
 
 @media screen and (max-width:600px) {
   body {
     /* background:red; */
+  }
+
+  nav div {
+    width:50%;
+    font-size: 80%;
+  }
+  
+  nav div.title {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left:0;
+  }
+
+  nav div.title span {
+    display: block;
+    width:100%;
+  }
+
+  nav div.name {
+    display:none;
+  }
+
+  .mobile-overlay ul {
+    padding-left:10px;
+    padding-right:10px;
   }
 
   .ms {
