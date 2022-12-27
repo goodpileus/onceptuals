@@ -199,6 +199,17 @@ section.text .header h2 {
   margin-top:.3rem;
 }
 
+section.text .heading {
+  /* background:lightblue; */
+  margin-bottom:30px;
+  margin-bottom:10px;
+  padding-top:35px;
+  display:flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+}
+
 section.text p,
 section.text div {
   width:calc(50% - 5px);
@@ -230,12 +241,14 @@ section.text p:first-of-type {
 }
 
 section.text .links {
-  margin:0;
+  /* margin:0; */
   padding:0;
   /* list-style-position: outside; */
   list-style: none;
   position: relative;
   /* left:-8px; */
+  
+  margin: 10px 0;
 }
 
 section.text .links li {
