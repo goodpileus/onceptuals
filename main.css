@@ -248,7 +248,7 @@ section.text .links {
   position: relative;
   /* left:-8px; */
   
-  margin: 10px 0;
+  margin: 0;
 }
 
 section.text .links li {
@@ -281,6 +281,15 @@ section.gallery div img {
   cursor:zoom-in;
 }
 
+section.gallery div .gallery-caption {
+  position: fixed;
+  right: 10px;
+  bottom:60px;
+  /* background: red; */
+  width: calc(25% - 13px);
+  display: none;
+}
+
 section.gallery div.inactive {
   opacity:0;
   pointer-events: none;
@@ -310,6 +319,11 @@ section.gallery div.active img {
   max-height:100%;
   max-width:100%;
   pointer-events: auto;
+}
+
+section.gallery div.active .gallery-caption {
+  display: block;
+  opacity: 1;
 }
 
 .lightbox-bg {
@@ -590,6 +604,11 @@ details ul li {
     padding-right: calc(25% + 107px);
   }
 
+  section.gallery div .gallery-caption {
+    right: calc(200px + 10px);
+    width: calc(25% - 113px);
+  }
+
   section.gallery div.active {
     padding-right: calc(25% + 107px);
     padding-left: 210px;
@@ -715,6 +734,11 @@ details ul li {
     /* display:none; */
     width:10%;
   }
+  
+  section.text .links {
+    padding-left:calc(50% + 5px);
+    /* background:red; */
+  }
 
   section.text p, section.text div {
     width: 100%;
@@ -726,6 +750,10 @@ details ul li {
     padding: 0 10%;
   }
 
+  .caption.full-c {
+    padding:0;
+  }
+
   section.gallery div {
     width: calc(50% - 5px);
   }
@@ -733,6 +761,13 @@ details ul li {
   section.gallery {
     padding: 0 calc(10% + 8px);
     padding-bottom: 50px;
+  }
+  
+  section.gallery div .gallery-caption {
+    left: calc(10% + 8px);
+    width: calc(80% - 16px);
+    bottom:10px;
+    height:40px;
   }
 
   section.gallery div.active {
@@ -742,6 +777,7 @@ details ul li {
   section.hide {
     opacity:0;
   }
+
 
 }
 
@@ -795,6 +831,13 @@ details ul li {
   section.gallery {
     padding: 0 10px 50px 10px;
     /* padding-right:10px; */
+  }
+  
+  section.gallery div .gallery-caption {
+    left:  10px;
+    width: calc(100% - 20px);
+    bottom:10px;
+    height:40px;
   }
 
   section.gallery div.active {
