@@ -69,10 +69,10 @@
         <details open>
           <summary>pages</summary>
           <ul>
-            <li><a href="index.html">essay</a></li>
-            <li><a href="gallery.html" class="active">gallery images</a></li>
+            <li><a href="index.html">info</a></li>
+            <li><a href="essay.html">essay</a></li>
+            <li><a href="gallery.html" class="active">exhibition images</a></li>
             <li><a href="links.html">online resources</a></li>
-            <li><a href="info.html">exhibition info</a></li>
           </ul>
         </details>
         <button class="grid-btn" onclick="grid()"></button>
@@ -82,10 +82,10 @@
         <button class="mobile-btn"><span>⊞</span></button>
         <div class="mobile-overlay">
           <ul>
-            <li><a href="index.html">essay</a></li>
-            <li><a href="gallery.html" class="active">gallery images</a></li>
+            <li><a href="index.html">info</a></li>
+            <li><a href="essay.html">essay</a></li>
+            <li><a href="gallery.html" class="active">exhibition images</a></li>
             <li><a href="links.html">online resources</a></li>
-            <li><a href="info.html">exhibition info</a></li>
             <li><button class="grid-btn" onclick="grid()"></button></li>
           </ul>
         </div>
@@ -93,191 +93,190 @@
 
     </nav>
 
-
     <section class="gallery">
-      <div>
+      <div class="slide">
         <img src="img/1-broken-bottle.jpg">
         <div class="gallery-caption">
           Broken Bottle
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/2-onceptual9.jpg">
         <div class="gallery-caption">
           Onceptual #9
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/3-double-postcard.jpg">
         <div class="gallery-caption">
           Double Postcard
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/4-onceptual10-72.jpg">
         <div class="gallery-caption">
           Onceptual #10 and #72
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/5-ice.jpg">
         <div class="gallery-caption">
-          
+          Eugenio Espinoza, <em>Onceptual #3</em>, 2022, acrylic on canvas, 50 x 45 x 6.5 inches
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/6-black-and-white.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/7-additional.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/8-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/9-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/10-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/11-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/12-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/13-paso-doble.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/14-extra.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/15-extra.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/16-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/17-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/18-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/19-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/20-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/21-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/22-install.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/23-reception.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/24-reception.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/25-reception.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/26-reception.jpg">
         <div class="gallery-caption">
           
         </div>
       </div>
 
-      <div>
+      <div class="slide">
         <img src="img/27-reception.jpg">
         <div class="gallery-caption">
           
@@ -286,6 +285,15 @@
 
       <span class="lightbox-bg"></span>
     </section>
+
+
+    <div class="lightbox-nav">
+      <button class="img-btn" id="prev"></button>
+      <span>/</span>
+      <button class="img-btn" id="next"></button>
+    </div>
+
+
   </main>
 
     
