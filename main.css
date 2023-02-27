@@ -317,7 +317,7 @@ section.gallery div.active {
 section.gallery div.active img {
   cursor:zoom-out;
   max-height:100%;
-  max-width:100%;
+  max-width:100;
   pointer-events: auto;
 }
 
@@ -836,6 +836,8 @@ details ul li {
     width: calc(80% - 16px);
     bottom:10px;
     height:40px;
+    font-size: .7rem;
+    line-height: 1rem;
   }
 
   section.gallery div.active {
