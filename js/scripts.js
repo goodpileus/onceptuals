@@ -81,6 +81,8 @@ $(".img-btn").on('click',function(){
   } else if(id=="next") {
     nav = $(".slide.active").next('.slide.inactive');
     if(nav.length == 0) nav = $(".slide.inactive").first();
+  } else if(id=="close") {
+    $(".gallery div.active img").click()
   }
   
   $(".slide.active").addClass("inactive");

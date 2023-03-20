@@ -113,7 +113,7 @@ h1, h2 {
 
 h2 {
   font-size: 1rem;
-  line-height: 1rem;
+  line-height: 1.3rem;
 }
 
 h2,
@@ -129,6 +129,15 @@ nav div.name,
   /* font-family:'schola'; */
 }
 
+ol {
+  padding-left: calc(50% + 5px);
+}
+
+ol li {
+  margin:10px 0;
+  padding-left: 5px;
+  margin-left: -5px;
+}
 
 .grid {
   border-collapse: collapse;
@@ -221,6 +230,10 @@ section.text div.full {
   padding:0 calc(25% + 2.5px);
 }
 
+section.text p.half {
+  padding-left: calc(25% + 2px);
+}
+
 section.text div.full.image {
   position: relative;
   margin:10px 0;
@@ -285,9 +298,11 @@ section.gallery div .gallery-caption {
   position: fixed;
   right: 10px;
   bottom:60px;
-  /* background: red; */
   width: calc(25% - 13px);
   display: none;
+  
+  font-size: 90%;
+  line-height: 150%;
 }
 
 section.gallery div.inactive {
@@ -308,9 +323,6 @@ section.gallery div.active {
   
   padding-right:calc(25% + 7px);
   padding-left:10px;
-  /* padding-right:10px; */
-  /* padding-top:calc(33.33333vh - 91px);
-  padding-bottom:50px; */
   pointer-events: none;
 }
 
@@ -325,6 +337,7 @@ section.gallery div.active .gallery-caption {
   display: block;
   opacity: 1;
   pointer-events: auto;
+
 }
 
 .lightbox-nav {
@@ -343,6 +356,15 @@ section.gallery div.active .gallery-caption {
 
 .lightbox-nav.menu-open {
   display: none;
+}
+
+.img-btn {
+  font-size: 90%;
+  line-height: 150%;
+}
+
+#close::after {
+  content:'close';
 }
 
 #prev::after {
@@ -791,13 +813,19 @@ details ul li {
     /* background:red; */
   }
 
-  section.text p, section.text div {
+  section.text p, 
+  section.text div {
     width: 100%;
     padding: 0 10%;
   }
 
-  section.text p.full, section.text div.full {
+  section.text p.full, 
+  section.text div.full {
     width: 100%;
+    padding: 0 10%;
+  }
+
+  section.text p.half {
     padding: 0 10%;
   }
 
@@ -848,6 +876,19 @@ details ul li {
     opacity:0;
   }
 
+  #close {
+    position: fixed;
+    right: 10px;
+    /* background: red; */
+    top: calc(60px);
+    height: calc(33.3333% - 46px);
+    width: calc(10% - 12px);
+  }
+
+  #close::after {
+    content: 'x';
+  }
+
   #prev {
     position: fixed;
     left: 10px;
@@ -886,6 +927,18 @@ details ul li {
     /* background:red; */
   }
 
+  h1, h2 {
+    padding:0;
+  }
+
+  ol {
+    padding-left:0;
+  }
+
+  ol li {
+    margin-left:25px;
+  }
+
   nav div {
     width:50%;
     font-size: 80%;
@@ -920,7 +973,9 @@ details ul li {
     padding: 0 0;
   }
 
-  section.text p.full, section.text div.full {
+  section.text p.full, 
+  section.text div.full,
+  section.text p.half {
     padding: 0 0;
   }
 
@@ -942,6 +997,10 @@ details ul li {
 
   section.gallery div.active {
     padding: 0 10px;
+  }
+
+  #close {
+    display: none;
   }
 
   #prev {
